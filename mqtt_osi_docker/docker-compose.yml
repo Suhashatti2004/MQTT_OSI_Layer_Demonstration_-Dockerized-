@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+  broker:
+    image: eclipse-mosquitto
+    container_name: mqtt-broker
+    ports:
+      - "1883:1883"
+    networks:
+      - mqtt-net
+
+  subscriber:
+    build: ./subscriber
+    container_name: mqtt-subscriber
+    depends_on:
+      - broker
+    networks:
+      - mqtt-net
+    stdin_open: true
+    tty: true
+
+  publisher:
+    build: ./publisher
+    container_name: mqtt-publisher
+    depends_on:
+      - broker
+    networks:
+      - mqtt-net
+    stdin_open: true
+    tty: true
+
+networks:
+  mqtt-net:
+    driver: bridge
