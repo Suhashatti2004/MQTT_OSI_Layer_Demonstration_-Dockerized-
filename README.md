@@ -77,8 +77,8 @@ This project builds custom Docker images for:
 MQTT Publisher
 MQTT Subscriber
 Docker Hub links (to be added later by the author):
-🔗 Docker Hub Publisher Image: <ADD YOUR DOCKER HUB LINK HERE>
-🔗 Docker Hub Subscriber Image: <ADD YOUR DOCKER HUB LINK HERE>
+🔗 Docker Hub Publisher Image: < https://hub.docker.com/repository/docker/suhas6/mqtt-osi-publisher/general >
+🔗 Docker Hub Subscriber Image: < https://hub.docker.com/repository/docker/suhas6/mqtt-osi-subscriber/general >
 
 🛠️ Technologies Used
 Python
